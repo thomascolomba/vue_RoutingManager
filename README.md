@@ -2,28 +2,9 @@
 
 ## Project setup
 ```
-npm install
-```
+Set of screens the user should go through
+src/events/BusinessEventList.js -> list of business events (events understood by the customer)
+src/components/RoutingManager -> deal with the routing application, routing is driven by events to display the right form
+src/views/Screen* -> screens who emit events handled by RoutingManager
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+note : A screen's code is not aware of routing details : it doesn't know what is the next screen the application will show
